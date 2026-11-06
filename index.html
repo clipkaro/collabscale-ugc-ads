@@ -57,7 +57,10 @@
         radial-gradient(640px 340px at 88% -60px, rgba(238,42,123,.20), transparent 65%),
         radial-gradient(560px 320px at -80px 30%, rgba(255,122,26,.13), transparent 65%),
         var(--bg); }
-      .brandline { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 46px; }
+      .brandline { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 46px; }
+      .logo-mark { display: block; height: auto; flex: none; }
+      .logo-header { width: 58px; }
+      .logo-hero { width: 112px; margin-bottom: 24px; }
       .brandline .name { font-family: var(--font-d); font-weight: 800; font-size: 24px; letter-spacing: -0.02em; }
       .brandline .name em { font-style: normal; color: var(--magenta); }
       .brandline .div { width: 26px; height: 3px; border-radius: 2px; background: var(--grad); align-self: center; }
@@ -255,12 +258,34 @@
     <header class="hero">
       <div class="wrap">
         <div class="brandline">
+          <svg class="logo-mark logo-header" viewBox="0 0 96 64" role="img" aria-label="CollabScale logo">
+            <defs>
+              <linearGradient id="csGradHeader" x1="0" y1="0" x2="96" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ee2a7b" /><stop offset="1" stop-color="#ff7a1a" />
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="94" height="62" rx="15" fill="#0d0d15" stroke="#262633" stroke-width="2" />
+            <text x="25" y="43" text-anchor="middle" font-family="'Bricolage Grotesque','Archivo',sans-serif" font-weight="800" font-size="30" fill="url(#csGradHeader)">C</text>
+            <path d="M42 24.5 L42 39.5 L55 32 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" />
+            <text x="71" y="43" text-anchor="middle" font-family="'Bricolage Grotesque','Archivo',sans-serif" font-weight="800" font-size="30" fill="url(#csGradHeader)">S</text>
+          </svg>
           <span class="name">Collab<em>Scale</em></span>
           <span class="div" aria-hidden="true"></span>
           <span class="sub">UGC Ads Studio</span>
         </div>
         <div class="hero-grid">
           <div>
+            <svg class="logo-mark logo-hero" viewBox="0 0 96 64" role="img" aria-label="CollabScale logo">
+              <defs>
+                <linearGradient id="csGradHero" x1="0" y1="0" x2="96" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#ee2a7b" /><stop offset="1" stop-color="#ff7a1a" />
+                </linearGradient>
+              </defs>
+              <rect x="1" y="1" width="94" height="62" rx="15" fill="#0d0d15" stroke="#262633" stroke-width="2" />
+              <text x="25" y="43" text-anchor="middle" font-family="'Bricolage Grotesque','Archivo',sans-serif" font-weight="800" font-size="30" fill="url(#csGradHero)">C</text>
+              <path d="M42 24.5 L42 39.5 L55 32 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" />
+              <text x="71" y="43" text-anchor="middle" font-family="'Bricolage Grotesque','Archivo',sans-serif" font-weight="800" font-size="30" fill="url(#csGradHero)">S</text>
+            </svg>
             <h1>Your next best ad won&rsquo;t look like an ad. It&rsquo;ll look like a <span class="hookword">customer</span>.</h1>
             <p class="lede">CollabScale makes <strong>real-creator video ads</strong> and <strong>AI UGC ads</strong> for brands — a real person on camera, talking about your product like they&rsquo;d tell a friend. Built to run on Instagram, Facebook and TikTok, with the hook landed in the first 2 seconds.</p>
             <div class="cta-row">
