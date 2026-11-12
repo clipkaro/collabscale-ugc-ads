@@ -113,8 +113,6 @@
       .way li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 8px; height: 8px; border-radius: 50%; }
       .way.real li::before { background: var(--magenta); }
       .way.ai li::before { background: var(--orange); }
-      .way .price-from { font-family: var(--font-m); font-size: 14px; color: var(--muted); }
-      .way .price-from strong { color: var(--ink); font-size: 17px; }
 
       /* ---------- Samples ---------- */
       .samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -162,27 +160,6 @@
       .playbook .flow .fstep { background: rgba(10,10,15,.55); border: 1px solid var(--line); padding: 8px 14px; border-radius: 999px; }
       .playbook .flow .arr { color: var(--orange); font-weight: 800; }
 
-      /* ---------- Pricing ---------- */
-      .pricing-sec { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-      .tabs { display: inline-flex; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 5px; gap: 4px; margin-bottom: 34px; }
-      .tabs button { border: none; background: transparent; color: var(--muted); font-family: var(--font-b); font-weight: 700;
-        font-size: 15.5px; padding: 11px 22px; border-radius: 999px; cursor: pointer; transition: background .15s, color .15s; }
-      .tabs button[aria-selected="true"] { background: var(--grad); color: #fff; }
-      .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      .price-card { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; }
-      .price-card.hot { border-color: var(--magenta); box-shadow: 0 18px 44px -22px rgba(238,42,123,.5); }
-      .price-card .tag { align-self: flex-start; font-family: var(--font-m); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase;
-        padding: 5px 11px; border-radius: 999px; background: var(--magenta-soft); color: #ff7eb0; margin-bottom: 16px; }
-      .price-card .tag.o { background: var(--orange-soft); color: #ffa25e; }
-      .price-card h3 { font-size: 22px; font-weight: 800; }
-      .price-card .amount { font-family: var(--font-d); font-weight: 800; font-size: 42px; margin: 12px 0 2px; letter-spacing: -0.02em; }
-      .price-card .amount .per { font-size: 17px; color: var(--muted); font-weight: 600; }
-      .price-card .pervideo { font-family: var(--font-m); font-size: 13px; color: var(--faint); margin-bottom: 20px; }
-      .price-card ul { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 10px; flex: 1; }
-      .price-card li { padding-left: 26px; position: relative; color: #d9d5e2; font-size: 15.5px; }
-      .price-card li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 700; }
-      .price-card .btn { justify-content: center; }
-      .price-note { color: var(--faint); font-size: 14.5px; margin-top: 22px; }
 
       /* ---------- Contact ---------- */
       .contact-card { border-radius: 26px; padding: clamp(34px, 6vw, 64px); text-align: center;
@@ -290,7 +267,6 @@
             <p class="lede">CollabScale makes <strong>real-creator video ads</strong> and <strong>AI UGC ads</strong> for brands — a real person on camera, talking about your product like they&rsquo;d tell a friend. Built to run on Instagram, Facebook and TikTok, with the hook landed in the first 2 seconds.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#samples">See sample ads</a>
-              <a class="btn btn-ghost" href="#pricing">View pricing</a>
             </div>
             <div class="platforms" aria-label="Ad platforms">
               <span>Instagram Ads</span><span>Facebook Ads</span><span>TikTok Ads</span><span>9:16 Vertical</span>
@@ -336,7 +312,6 @@
                 <li>Creators across beauty, fitness, food, tech and more</li>
                 <li>Best for hero ads and products people need to see used</li>
               </ul>
-              <div class="price-from"><strong>Custom pricing</strong> — depends on the creator · DM for a quote</div>
             </div>
           </article>
           <article class="way ai">
@@ -352,7 +327,6 @@
                 <li>No shipping — works even before your product launches</li>
                 <li>Best for volume: many variations of one winning idea</li>
               </ul>
-              <div class="price-from">Packs from <strong>₹7,999</strong> · our fastest turnaround</div>
             </div>
           </article>
         </div>
@@ -488,7 +462,7 @@
           <h3>The playbook: AI finds the winner, real creators scale it</h3>
           <p>Start with an AI test pack and run two different hooks. The hook that converts gets remade with a real creator — higher trust, same proven angle. Cheap testing, premium scaling.</p>
           <div class="flow">
-            <span class="fstep">AI Test Pack — ₹7,999</span><span class="arr">→</span>
+            <span class="fstep">AI Test Pack</span><span class="arr">→</span>
             <span class="fstep">Find the winning hook</span><span class="arr">→</span>
             <span class="fstep">Remake with real creators</span><span class="arr">→</span>
             <span class="fstep">Scale the winner</span>
@@ -497,114 +471,6 @@
       </div>
     </section>
 
-    <!-- ================= PRICING ================= -->
-    <section class="pricing-sec" id="pricing">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Simple packs. <span class="accent-o">No retainers required to start.</span></h2>
-          <p>Every pack includes hook + script writing, filming or generation, editing, captions and ad-ready 9:16 files for Instagram, Facebook and TikTok.</p>
-        </div>
-        <div class="tabs" role="tablist" aria-label="Pricing type">
-          <button type="button" role="tab" id="tab-real" aria-selected="true" aria-controls="panel-real" data-tab="real">Real Creator UGC</button>
-          <button type="button" role="tab" id="tab-ai" aria-selected="false" aria-controls="panel-ai" data-tab="ai">AI UGC Ads</button>
-        </div>
-
-        <div id="panel-real" role="tabpanel" aria-labelledby="tab-real">
-          <div class="price-grid">
-            <article class="price-card">
-              <span class="tag">Start here</span>
-              <h3>Test Pack</h3>
-              <div class="amount">Custom</div>
-              <div class="pervideo">Price depends on the creator — DM for a quote</div>
-              <ul>
-                <li>3 UGC video ads</li>
-                <li>1 real creator, matched to your niche</li>
-                <li>Hook + script written for you</li>
-                <li>Edited, captioned, ready to run</li>
-                <li>Delivery in 5–7 days</li>
-              </ul>
-              <a class="btn btn-ghost" href="#contact">Start with Test Pack</a>
-            </article>
-            <article class="price-card hot">
-              <span class="tag">More hooks to test</span>
-              <h3>Growth Pack</h3>
-              <div class="amount">Custom</div>
-              <div class="pervideo">Price depends on the creator — DM for a quote</div>
-              <ul>
-                <li>8 UGC video ads</li>
-                <li>2–3 creators for different faces &amp; angles</li>
-                <li>Multiple hooks per product</li>
-                <li>Edited, captioned, ready to run</li>
-                <li>Delivery in 5–7 days</li>
-              </ul>
-              <a class="btn btn-primary" href="#contact">Start with Growth Pack</a>
-            </article>
-            <article class="price-card">
-              <span class="tag o">Always-on ads</span>
-              <h3>Monthly</h3>
-              <div class="amount">Custom</div>
-              <div class="pervideo">Price depends on the creator — DM for a quote</div>
-              <ul>
-                <li>15 UGC video ads every month</li>
-                <li>Rotating creators, fresh hooks weekly</li>
-                <li>Winners remade, losers replaced</li>
-                <li>Edited, captioned, ready to run</li>
-                <li>Rolling 5–7 day delivery</li>
-              </ul>
-              <a class="btn btn-ghost" href="#contact">Go Monthly</a>
-            </article>
-          </div>
-        </div>
-
-        <div id="panel-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
-          <div class="price-grid">
-            <article class="price-card">
-              <span class="tag">Start here</span>
-              <h3>Test Pack</h3>
-              <div class="amount">₹7,999</div>
-              <div class="pervideo">one-time · ₹4,000 per video</div>
-              <ul>
-                <li>2 AI UGC video ads</li>
-                <li>AI avatar presenter + natural voice</li>
-                <li>Hook + script written for you</li>
-                <li>No product shipping needed</li>
-                <li>Edited, captioned, ready to run</li>
-              </ul>
-              <a class="btn btn-ghost" href="#contact">Start with Test Pack</a>
-            </article>
-            <article class="price-card hot">
-              <span class="tag">More hooks to test</span>
-              <h3>Growth Pack</h3>
-              <div class="amount">₹17,999</div>
-              <div class="pervideo">one-time · ₹3,600 per video</div>
-              <ul>
-                <li>5 AI UGC video ads</li>
-                <li>Multiple avatars, voices &amp; angles</li>
-                <li>Test a new hook every weekday</li>
-                <li>No product shipping needed</li>
-                <li>Edited, captioned, ready to run</li>
-              </ul>
-              <a class="btn btn-primary" href="#contact">Start with Growth Pack</a>
-            </article>
-            <article class="price-card">
-              <span class="tag o">Always-on ads</span>
-              <h3>Monthly</h3>
-              <div class="amount">₹34,999<span class="per">/mo</span></div>
-              <div class="pervideo">per month · ₹3,500 per video</div>
-              <ul>
-                <li>10 AI UGC video ads every month</li>
-                <li>Fresh hooks &amp; angles every week</li>
-                <li>Winners flagged for real-creator remakes</li>
-                <li>No product shipping needed</li>
-                <li>Edited, captioned, ready to run</li>
-              </ul>
-              <a class="btn btn-ghost" href="#contact">Go Monthly</a>
-            </article>
-          </div>
-        </div>
-        <p class="price-note">Not sure which format fits your product? DM us — we&rsquo;ll tell you honestly whether real creators or AI will convert better for what you sell.</p>
-      </div>
-    </section>
 
     <!-- ================= CONTACT ================= -->
     <section id="contact">
@@ -651,16 +517,7 @@
     </div>
 
     <script>
-      /* ---------- Pricing tabs ---------- */
-      var tabBtns = document.querySelectorAll('.tabs [data-tab]');
-      tabBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          tabBtns.forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
-          btn.setAttribute('aria-selected', 'true');
-          document.getElementById('panel-real').hidden = btn.dataset.tab !== 'real';
-          document.getElementById('panel-ai').hidden = btn.dataset.tab !== 'ai';
-        });
-      });
+
 
       /* ---------- Sample scripts ---------- */
       var SAMPLES = {
